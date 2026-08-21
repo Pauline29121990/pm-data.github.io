@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Contrôle des factures fournisseurs | Portfolio Data</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Présentation synthétique du projet */
+			#banner.project-hero {
+				min-height: auto;
+				padding: 7.5em 0 3.5em;
+			}
+
+			#banner.project-hero .inner {
+				max-width: 80em;
+			}
+
+			.project-eyebrow {
+				color: #9bf1ff;
+				font-size: 0.8em;
+				font-weight: 600;
+				letter-spacing: 0.18em;
+				margin: 0 0 1.25em;
+				text-transform: uppercase;
+			}
+
+			#banner.project-hero header.major {
+				margin-bottom: 1.25em;
+			}
+
+			#banner.project-hero header.major h1 {
+				font-size: clamp(2.5em, 5vw, 4.5em);
+				max-width: 950px;
+			}
+
+			#banner.project-hero .project-summary {
+				font-size: 1.15em;
+				line-height: 1.7;
+				max-width: 760px;
+				margin-bottom: 2.5em;
+			}
+
+			.project-facts {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 0;
+				margin: 0;
+			}
+
+			.project-fact {
+				border-left: 1px solid rgba(255, 255, 255, 0.25);
+				padding: 0 1.5em;
+			}
+
+			.project-fact:first-child {
+				border-left: 0;
+				padding-left: 0;
+			}
+
+			.project-fact span {
+				color: #9bf1ff;
+				display: block;
+				font-size: 0.82em;
+				font-weight: 600;
+				margin-bottom: 0.35em;
+			}
+
+			.project-fact strong {
+				display: block;
+				font-size: 0.95em;
+				font-weight: 400;
+				line-height: 1.5;
+			}
+
+			#one.project-challenge .challenge-intro {
+				font-size: 1.05em;
+				margin-bottom: 2em;
+				max-width: 900px;
+			}
+
+			.challenge-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1.25em;
+			}
+
+			.challenge-card {
+				background: rgba(255, 255, 255, 0.035);
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 0.35em;
+				padding: 1.75em;
+			}
+
+			.challenge-card .icon {
+				color: #9bf1ff;
+				font-size: 1.8em;
+				margin-bottom: 0.6em;
+			}
+
+			.challenge-card h3 {
+				font-size: 1.1em;
+				margin-bottom: 0.65em;
+			}
+
+			.challenge-card p {
+				font-size: 0.95em;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			.challenge-question {
+				align-items: center;
+				border: 1px solid #6fc3df;
+				border-radius: 0.35em;
+				display: flex;
+				gap: 1em;
+				margin-top: 1.5em;
+				padding: 1.4em 1.6em;
+			}
+
+			.challenge-question .icon {
+				color: #9bf1ff;
+				font-size: 1.6em;
+			}
+
+			.challenge-question strong {
+				font-size: 1.05em;
+			}
+
+			/* Suite de la page projet */
+			.solution-spotlight .content {
+				background: #0f2037;
+			}
+
+			.solution-spotlight .image img,
+			.impact-spotlight .image img {
+				object-fit: cover;
+			}
+
+			.solution-lead {
+				font-size: 1.05em;
+				line-height: 1.75;
+			}
+
+			.solution-metrics {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 0;
+				margin-top: 2em;
+			}
+
+			.solution-metric {
+				border-left: 1px solid rgba(255, 255, 255, 0.2);
+				padding: 0 1.25em;
+			}
+
+			.solution-metric:first-child {
+				border-left: 0;
+				padding-left: 0;
+			}
+
+			.solution-metric .icon {
+				color: #9bf1ff;
+				display: block;
+				font-size: 1.5em;
+				margin-bottom: 0.55em;
+			}
+
+			.solution-metric strong {
+				display: block;
+				font-size: 1em;
+				line-height: 1.45;
+			}
+
+			.process-section {
+				background: #665b9d;
+				padding: 4.5em 0;
+			}
+
+			.process-section .inner,
+			.features-section .inner,
+			.tech-section .inner {
+				margin: 0 auto;
+				max-width: 80em;
+				padding: 0 3em;
+				width: calc(100% - 6em);
+			}
+
+			.section-heading {
+				text-align: center;
+			}
+
+			.section-heading.major:after {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.process-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				margin-top: 2.5em;
+			}
+
+			.process-step {
+				padding: 0 1.4em;
+				position: relative;
+				text-align: center;
+			}
+
+			.process-step:not(:last-child):after {
+				background: rgba(255, 255, 255, 0.35);
+				content: '';
+				height: 1px;
+				position: absolute;
+				right: -12%;
+				top: 3.15em;
+				width: 24%;
+			}
+
+			.process-number {
+				color: rgba(255, 255, 255, 0.14);
+				font-size: 3.5em;
+				font-weight: 700;
+				line-height: 1;
+			}
+
+			.process-step .icon {
+				color: #c7bfff;
+				font-size: 2em;
+				margin: 0.25em 0 0.75em;
+			}
+
+			.process-step h3 {
+				font-size: 1.05em;
+				margin-bottom: 0.55em;
+			}
+
+			.process-step p {
+				font-size: 0.9em;
+				line-height: 1.55;
+				margin: 0;
+			}
+
+			.features-section {
+				background: #101e33;
+				padding: 4.5em 0;
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1em;
+				margin-top: 2.5em;
+			}
+
+			.feature-item {
+				background: rgba(255, 255, 255, 0.055);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				padding: 1.7em;
+				text-align: center;
+			}
+
+			.feature-item .icon {
+				color: #c7bfff;
+				font-size: 1.8em;
+				margin-bottom: 0.55em;
+			}
+
+			.feature-item h3 {
+				font-size: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.feature-item p {
+				font-size: 0.88em;
+				margin: 0;
+			}
+
+			.impact-spotlight .content {
+				background: #10243b;
+			}
+
+			.impact-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			.impact-list li {
+				align-items: flex-start;
+				display: flex;
+				gap: 1em;
+				margin-bottom: 1.2em;
+			}
+
+			.impact-list .icon {
+				color: #9bf1c5;
+				font-size: 1.35em;
+				margin-top: 0.15em;
+				width: 1.4em;
+			}
+
+			.impact-list strong,
+			.impact-list span {
+				display: block;
+			}
+
+			.impact-list span {
+				font-size: 0.9em;
+				opacity: 0.8;
+			}
+
+			.impact-quote {
+				border-left: 3px solid #9bf1c5;
+				color: #b9f7d3;
+				font-size: 1.05em;
+				font-style: normal;
+				margin: 2em 0 0;
+				padding: 0.25em 0 0.25em 1.25em;
+			}
+
+			.tech-section {
+				background: #2b3b59;
+				padding: 2.5em 0;
+			}
+
+			.tech-content {
+				align-items: flex-start;
+				display: flex;
+				gap: 1.5em;
+			}
+
+			.tech-content > .icon {
+				border: 1px solid rgba(199, 191, 255, 0.5);
+				color: #c7bfff;
+				font-size: 1.8em;
+				padding: 0.65em;
+			}
+
+			.tech-content h2 {
+				font-size: 1.35em;
+				margin-bottom: 0.55em;
+			}
+
+			.tech-list {
+				font-size: 0.95em;
+				margin-bottom: 0.65em;
+			}
+
+			.tech-evolution {
+				font-size: 0.88em;
+				margin: 0;
+				opacity: 0.82;
+			}
+
+			@media screen and (max-width: 980px) {
+				.project-facts,
+				.challenge-grid,
+				.features-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+
+				.process-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					row-gap: 2.5em;
+				}
+
+				.process-step:after {
+					display: none;
+				}
+
+				.project-fact:nth-child(3) {
+					border-left: 0;
+					padding-left: 0;
+				}
+
+				.project-fact {
+					margin-bottom: 1.5em;
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				#banner.project-hero {
+					padding: 6em 0 2.5em;
+				}
+
+				.project-facts,
+				.challenge-grid,
+				.solution-metrics,
+				.process-grid,
+				.features-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.process-section .inner,
+				.features-section .inner,
+				.tech-section .inner {
+					padding: 0 1.5em;
+					width: 100%;
+				}
+
+				.solution-metric {
+					border-left: 0;
+					border-top: 1px solid rgba(255, 255, 255, 0.2);
+					padding: 1em 0;
+				}
+
+				.tech-content {
+					flex-direction: column;
+				}
+
+				.project-fact,
+				.project-fact:nth-child(3) {
+					border-left: 0;
+					border-top: 1px solid rgba(255, 255, 255, 0.2);
+					padding: 1em 0 0;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>PM</strong> <span>PORTFOLIO DATA</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2 project-hero">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<p class="project-eyebrow">Application métier · Data &amp; automatisation</p>
+							<header class="major">
+								<h1>Fiabiliser le contrôle des factures fournisseurs</h1>
+							</header>
+							<p class="project-summary">Une application qui automatise le rapprochement entre les documents fournisseurs et les données de l’ERP Odeis.</p>
+							<div class="project-facts">
+								<div class="project-fact">
+									<span>Mon rôle</span>
+									<strong>Product Owner &amp; Data</strong>
+								</div>
+								<div class="project-fact">
+									<span>Utilisateurs</span>
+									<strong>Achats · Appro · Comptabilité</strong>
+								</div>
+								<div class="project-fact">
+									<span>Solution</span>
+									<strong>Application Streamlit</strong>
+								</div>
+								<div class="project-fact">
+									<span>Stack</span>
+									<strong>Python · Streamlit · Pandas</strong>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="project-challenge">
+								<div class="inner">
+									<header class="major">
+										<h2>Le défi métier</h2>
+									</header>
+									<p class="challenge-intro">Un contrôle essentiel, mais ralenti par la multiplicité des documents et des règles fournisseur.</p>
+
+									<div class="challenge-grid">
+										<article class="challenge-card">
+											<span class="icon regular fa-file-alt" aria-hidden="true"></span>
+											<h3>Sources dispersées</h3>
+											<p>PDF, Excel, commandes, factures et bons de réception.</p>
+										</article>
+										<article class="challenge-card">
+											<span class="icon solid fa-calculator" aria-hidden="true"></span>
+											<h3>Calculs complexes</h3>
+											<p>Or, poids, façon, pertes et frais annexes.</p>
+										</article>
+										<article class="challenge-card">
+											<span class="icon solid fa-exclamation-triangle" aria-hidden="true"></span>
+											<h3>Risques d’erreur</h3>
+											<p>Ressaisies manuelles, écarts difficiles à détecter et suivi fragmenté.</p>
+										</article>
+									</div>
+
+									<div class="challenge-question">
+										<span class="icon solid fa-question-circle" aria-hidden="true"></span>
+										<strong>Comment automatiser et fiabiliser le rapprochement avant validation des factures&nbsp;?</strong>
+									</div>
+								</div>
+							</section>
+
+						<!-- Solution -->
+							<section id="solution" class="spotlights">
+								<section class="solution-spotlight">
+									<div class="image">
+										<!-- Remplacer pic08.jpg par une capture de la page principale de l'application -->
+										<img src="images/pic08.jpg" alt="Aperçu de l’application de contrôle des factures" data-position="center center" />
+									</div>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h2>La solution développée</h2>
+											</header>
+											<p class="solution-lead">Une application web qui automatise le contrôle des factures, proformas et bons de réception. Elle extrait les données, les rapproche avec l’ERP Odeis et applique les règles métier propres à chaque fournisseur.</p>
+
+											<div class="solution-metrics">
+												<div class="solution-metric">
+													<span class="icon solid fa-users" aria-hidden="true"></span>
+													<strong>Environ 30<br />fournisseurs</strong>
+												</div>
+												<div class="solution-metric">
+													<span class="icon regular fa-file-alt" aria-hidden="true"></span>
+													<strong>PDF &amp; Excel</strong>
+												</div>
+												<div class="solution-metric">
+													<span class="icon solid fa-exchange-alt" aria-hidden="true"></span>
+													<strong>Proforma → Facture → Réception</strong>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Fonctionnement -->
+							<section id="fonctionnement" class="process-section">
+								<div class="inner">
+									<header class="major section-heading">
+										<h2>Comment ça fonctionne</h2>
+									</header>
+									<div class="process-grid">
+										<article class="process-step">
+											<div class="process-number">01</div>
+											<span class="icon solid fa-file-upload" aria-hidden="true"></span>
+											<h3>Importer</h3>
+											<p>Lecture du document fournisseur.</p>
+										</article>
+										<article class="process-step">
+											<div class="process-number">02</div>
+											<span class="icon solid fa-search" aria-hidden="true"></span>
+											<h3>Rapprocher</h3>
+											<p>Recherche des données dans Odeis.</p>
+										</article>
+										<article class="process-step">
+											<div class="process-number">03</div>
+											<span class="icon solid fa-calculator" aria-hidden="true"></span>
+											<h3>Contrôler</h3>
+											<p>Calcul des écarts et application des tolérances.</p>
+										</article>
+										<article class="process-step">
+											<div class="process-number">04</div>
+											<span class="icon solid fa-check-circle" aria-hidden="true"></span>
+											<h3>Décider</h3>
+											<p>Validation, refus et archivage.</p>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Fonctionnalités -->
+							<section id="fonctionnalites" class="features-section">
+								<div class="inner">
+									<header class="major section-heading">
+										<h2>Fonctionnalités clés</h2>
+									</header>
+									<div class="features-grid">
+										<article class="feature-item">
+											<span class="icon regular fa-file" aria-hidden="true"></span>
+											<h3>Import &amp; extraction</h3>
+											<p>PDF, XLS et XLSX</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-puzzle-piece" aria-hidden="true"></span>
+											<h3>Rapprochement ERP</h3>
+											<p>Commandes et réceptions</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-balance-scale" aria-hidden="true"></span>
+											<h3>Contrôles métier</h3>
+											<p>Quantités, poids, prix et or</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-exclamation-triangle" aria-hidden="true"></span>
+											<h3>Gestion des anomalies</h3>
+											<p>Tolérances et décisions</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-archive" aria-hidden="true"></span>
+											<h3>Traçabilité</h3>
+											<p>Historique et archivage</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-chart-bar" aria-hidden="true"></span>
+											<h3>Pilotage</h3>
+											<p>Suivi et exports Excel</p>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Impact -->
+							<section id="impact" class="spotlights">
+								<section class="impact-spotlight">
+									<div class="image">
+										<!-- Remplacer pic09.jpg par une capture du suivi ou du pilotage -->
+										<img src="images/pic09.jpg" alt="Aperçu du suivi des contrôles et des anomalies" data-position="center center" />
+									</div>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h2>Impact</h2>
+											</header>
+											<ul class="impact-list">
+												<li><span class="icon solid fa-rocket" aria-hidden="true"></span><div><strong>Processus accéléré</strong><span>Moins de lectures et de comparaisons manuelles.</span></div></li>
+												<li><span class="icon solid fa-shield-alt" aria-hidden="true"></span><div><strong>Contrôles fiabilisés</strong><span>Des règles et tolérances appliquées de façon homogène.</span></div></li>
+												<li><span class="icon solid fa-clipboard-list" aria-hidden="true"></span><div><strong>Traçabilité renforcée</strong><span>Un historique détaillé des anomalies et des décisions.</span></div></li>
+												<li><span class="icon solid fa-desktop" aria-hidden="true"></span><div><strong>Pilotage centralisé</strong><span>Une vision claire des documents traités et restant à contrôler.</span></div></li>
+											</ul>
+											<blockquote class="impact-quote">Un processus auparavant manuel et dispersé devient guidé, automatisé et traçable.</blockquote>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Technologies -->
+							<section id="technologies" class="tech-section">
+								<div class="inner">
+									<div class="tech-content">
+										<span class="icon solid fa-code" aria-hidden="true"></span>
+										<div>
+											<h2>Technologies</h2>
+											<p class="tech-list">Python · Streamlit · Pandas · NumPy · PDFPlumber · OpenPyXL · PyArrow · Pytest · API REST</p>
+											<p class="tech-evolution"><strong>Évolution :</strong> migration progressive vers Django et centralisation future des historiques dans PostgreSQL.</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
