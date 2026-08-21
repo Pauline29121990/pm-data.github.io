@@ -14,8 +14,10 @@
 		<style>
 			/* Présentation synthétique du projet */
 			#banner.project-hero {
-				min-height: auto;
-				padding: 5.5em 0 2em;
+			    height: auto !important;
+			    min-height: 0 !important;
+			    max-height: none !important;
+			    padding: 5.5em 0 2em;
 			}
 
 			#banner.project-hero .inner {
@@ -134,21 +136,19 @@
 			}
 
 			#one.project-challenge {
-			    padding: 2.5em 0;
+			    padding: 0 !important;
 			}
 			
 			#one.project-challenge .inner {
-			    padding-top: 0;
-			    padding-bottom: 0;
+			    padding-top: 2em !important;
+			    padding-bottom: 2em !important;
 			}
 			
 			#one.project-challenge header.major {
 			    margin-bottom: 1em;
 			}
 			
-			#one.project-challenge .challenge-intro {
-			    margin-bottom: 1.25em;
-			}
+		
 
 			/* Suite de la page projet */
 			.solution-spotlight .content {
@@ -404,7 +404,7 @@
 
 			@media screen and (max-width: 736px) {
 				#banner.project-hero {
-					padding: 6em 0 2.5em;
+					padding: 5em 0 1.75em;
 				}
 
 				.project-facts,
@@ -439,6 +439,42 @@
 					padding: 1em 0 0;
 				}
 			}
+			
+			/* Corrections finales des hauteurs */
+
+				#banner.project-hero {
+				    height: auto !important;
+				    min-height: 0 !important;
+				    max-height: none !important;
+				    padding: 5.5em 0 2em;
+				}
+				
+				#one.project-challenge {
+				    padding: 0 !important;
+				}
+				
+				#one.project-challenge .inner {
+				    padding-top: 2em !important;
+				    padding-bottom: 2em !important;
+				}
+				
+				#one.project-challenge .challenge-intro {
+				    font-size: 1.05em;
+				    line-height: 1.5;
+				    margin-bottom: 1.25em;
+				    max-width: 900px;
+				}
+				
+				@media screen and (max-width: 736px) {
+				    #banner.project-hero {
+				        padding: 5em 0 1.75em;
+				    }
+				
+				    #one.project-challenge .inner {
+				        padding-top: 1.5em !important;
+				        padding-bottom: 1.5em !important;
+				    }
+				}
 		</style>
 	</head>
 	<body class="is-preload">
