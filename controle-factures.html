@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Contrôle des factures fournisseurs | Portfolio Data</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Présentation synthétique du projet */
+			#banner.project-hero {
+				min-height: auto;
+				padding: 7.5em 0 3.5em;
+			}
+
+			#banner.project-hero .inner {
+				max-width: 80em;
+			}
+
+			.project-eyebrow {
+				color: #9bf1ff;
+				font-size: 0.8em;
+				font-weight: 600;
+				letter-spacing: 0.18em;
+				margin: 0 0 1.25em;
+				text-transform: uppercase;
+			}
+
+			#banner.project-hero header.major {
+				margin-bottom: 1.25em;
+			}
+
+			#banner.project-hero header.major h1 {
+				font-size: clamp(2.5em, 5vw, 4.5em);
+				max-width: 950px;
+			}
+
+			#banner.project-hero .project-summary {
+				font-size: 1.15em;
+				line-height: 1.7;
+				max-width: 760px;
+				margin-bottom: 2.5em;
+			}
+
+			.project-facts {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 0;
+				margin: 0;
+			}
+
+			.project-fact {
+				border-left: 1px solid rgba(255, 255, 255, 0.25);
+				padding: 0 1.5em;
+			}
+
+			.project-fact:first-child {
+				border-left: 0;
+				padding-left: 0;
+			}
+
+			.project-fact span {
+				color: #9bf1ff;
+				display: block;
+				font-size: 0.82em;
+				font-weight: 600;
+				margin-bottom: 0.35em;
+			}
+
+			.project-fact strong {
+				display: block;
+				font-size: 0.95em;
+				font-weight: 400;
+				line-height: 1.5;
+			}
+
+			#one.project-challenge .challenge-intro {
+				font-size: 1.05em;
+				margin-bottom: 2em;
+				max-width: 900px;
+			}
+
+			.challenge-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1.25em;
+			}
+
+			.challenge-card {
+				background: rgba(255, 255, 255, 0.035);
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 0.35em;
+				padding: 1.75em;
+			}
+
+			.challenge-card .icon {
+				color: #9bf1ff;
+				font-size: 1.8em;
+				margin-bottom: 0.6em;
+			}
+
+			.challenge-card h3 {
+				font-size: 1.1em;
+				margin-bottom: 0.65em;
+			}
+
+			.challenge-card p {
+				font-size: 0.95em;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			.challenge-question {
+				align-items: center;
+				border: 1px solid #6fc3df;
+				border-radius: 0.35em;
+				display: flex;
+				gap: 1em;
+				margin-top: 1.5em;
+				padding: 1.4em 1.6em;
+			}
+
+			.challenge-question .icon {
+				color: #9bf1ff;
+				font-size: 1.6em;
+			}
+
+			.challenge-question strong {
+				font-size: 1.05em;
+			}
+
+			@media screen and (max-width: 980px) {
+				.project-facts,
+				.challenge-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+
+				.project-fact:nth-child(3) {
+					border-left: 0;
+					padding-left: 0;
+				}
+
+				.project-fact {
+					margin-bottom: 1.5em;
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				#banner.project-hero {
+					padding: 6em 0 2.5em;
+				}
+
+				.project-facts,
+				.challenge-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.project-fact,
+				.project-fact:nth-child(3) {
+					border-left: 0;
+					border-top: 1px solid rgba(255, 255, 255, 0.2);
+					padding: 1em 0 0;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>PM</strong> <span>PORTFOLIO DATA</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2 project-hero">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<p class="project-eyebrow">Application métier · Data &amp; automatisation</p>
+							<header class="major">
+								<h1>Fiabiliser le contrôle des factures fournisseurs</h1>
+							</header>
+							<p class="project-summary">Une application qui automatise le rapprochement entre les documents fournisseurs et les données de l’ERP Odeis.</p>
+							<div class="project-facts">
+								<div class="project-fact">
+									<span>Mon rôle</span>
+									<strong>Product Owner &amp; Data</strong>
+								</div>
+								<div class="project-fact">
+									<span>Utilisateurs</span>
+									<strong>Achats · Appro · Comptabilité</strong>
+								</div>
+								<div class="project-fact">
+									<span>Solution</span>
+									<strong>Application Streamlit</strong>
+								</div>
+								<div class="project-fact">
+									<span>Stack</span>
+									<strong>Python · Pandas · PostgreSQL</strong>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="project-challenge">
+								<div class="inner">
+									<header class="major">
+										<h2>Le défi métier</h2>
+									</header>
+									<p class="challenge-intro">Un contrôle essentiel, mais ralenti par la multiplicité des documents et des règles fournisseur.</p>
+
+									<div class="challenge-grid">
+										<article class="challenge-card">
+											<span class="icon regular fa-file-alt" aria-hidden="true"></span>
+											<h3>Sources dispersées</h3>
+											<p>PDF, Excel, commandes, factures et bons de réception.</p>
+										</article>
+										<article class="challenge-card">
+											<span class="icon solid fa-calculator" aria-hidden="true"></span>
+											<h3>Calculs complexes</h3>
+											<p>Or, poids, façon, pertes et frais annexes.</p>
+										</article>
+										<article class="challenge-card">
+											<span class="icon solid fa-exclamation-triangle" aria-hidden="true"></span>
+											<h3>Risques d’erreur</h3>
+											<p>Ressaisies manuelles, écarts difficiles à détecter et suivi fragmenté.</p>
+										</article>
+									</div>
+
+									<div class="challenge-question">
+										<span class="icon solid fa-question-circle" aria-hidden="true"></span>
+										<strong>Comment automatiser et fiabiliser le rapprochement avant validation des factures&nbsp;?</strong>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic08.jpg" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Orci maecenas</h3>
+											</header>
+											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+											<ul class="actions">
+												<li><a href="generic.html" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic09.jpg" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Rhoncus magna</h3>
+											</header>
+											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+											<ul class="actions">
+												<li><a href="generic.html" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Sed nunc ligula</h3>
+											</header>
+											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+											<ul class="actions">
+												<li><a href="generic.html" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>Massa libero</h2>
+									</header>
+									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+									<ul class="actions">
+										<li><a href="generic.html" class="button next">Get Started</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
