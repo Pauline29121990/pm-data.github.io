@@ -1,0 +1,1148 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Performance fournisseurs | Portfolio Data</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Présentation synthétique du projet */
+
+			/* => Couleur du bandeau du haut : orange dédié à ce projet (remplace le violet "style2" par défaut) */
+			#banner.style2:after {
+				background-color: #e8720c !important;
+			}
+
+			/* => Bandeau du haut : hauteur et espacement général */
+			#banner.project-hero {
+			    height: auto !important;
+			    min-height: 0 !important;
+			    max-height: none !important;
+			    padding: 5.5em 0 2em;
+			}
+
+			/* => Largeur maximale du contenu à l'intérieur du bandeau titre */
+			#banner.project-hero .inner {
+				max-width: 80em;
+			}
+
+			/* => Petit texte au-dessus du titre ("PILOTAGE · DATA & DÉCISION") */
+			.project-eyebrow {
+				color: #ffb26b;
+				font-size: 0.7em;
+				font-weight: 600;
+				letter-spacing: 0.18em;
+				margin: 0 0 1.25em;
+				text-transform: uppercase;
+			}
+
+			/* => Espace sous le titre "Piloter et comparer la performance fournisseurs" */
+			#banner.project-hero header.major {
+				margin-bottom: 0.75em;
+			}
+
+			/* => Taille du titre principal */
+			#banner.project-hero header.major h1 {
+			    font-size: clamp(1.2em, 2.4vw, 2.1em);
+			    line-height: 1.2;
+			    max-width: 950px;
+			}
+
+			/* => Phrase de résumé sous le titre */
+			#banner.project-hero .project-summary {
+				font-size: 1em;
+				line-height: 1.55;
+				margin-bottom: 1.5em;
+			}
+
+			/* => Grille des 4 encadrés en bas du bandeau (Mon rôle / Utilisateurs / Solution / Stack) */
+			.project-facts {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 0;
+				margin: 0;
+			}
+
+			/* => Chaque encadré individuel (bordure verticale de séparation, espacement) */
+			.project-fact {
+				border-left: 1px solid rgba(255, 255, 255, 0.25);
+				padding: 0 1.5em;
+			}
+
+			/* => Le 1er encadré : pas de bordure à gauche */
+			.project-fact:first-child {
+				border-left: 0;
+				padding-left: 0;
+			}
+
+			/* => Petit libellé ("Mon rôle", "Utilisateurs"...) dans chaque encadré */
+			.project-fact span {
+				color: #ffb26b;
+				display: block;
+				font-size: 0.82em;
+				font-weight: 600;
+				margin-bottom: 0.35em;
+			}
+
+			/* => Valeur en gras dans chaque encadré */
+			.project-fact strong {
+				display: block;
+				font-size: 0.7em;
+				font-weight: 400;
+				line-height: 1.5;
+			}
+
+			/* => Phrase d'intro du bloc "Le défi métier" */
+			#one.project-challenge .challenge-intro {
+				font-size: 1em;
+				line-height: 1.5;
+				margin-bottom: 1.5em;
+				max-width: none;
+			}
+
+			/* => Grille des 3 cartes du bloc "Le défi métier" */
+			.challenge-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1.25em;
+			}
+
+			/* => Chaque carte du "défi métier" : fond, bordure, coins arrondis */
+			.challenge-card {
+				background: rgba(255, 255, 255, 0.035);
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 0.35em;
+				padding: 1em 1em;
+			}
+
+			/* => Format des icônes du bloc "défi métier" */
+			.challenge-card .icon {
+				color: #ffb26b;
+				font-size: 1.2em;
+				margin-bottom: 0.35em;
+			}
+
+			/* => Titre de chaque carte "défi métier" */
+			.challenge-card h3 {
+				font-size: 0.8em;
+				margin-bottom: 0.1em;
+			}
+
+			/* => Texte descriptif de chaque carte "défi métier" */
+			.challenge-card p {
+				font-size: 0.7em;
+				line-height: 1.45;
+				margin: 0;
+			}
+
+			/* => Encadré bleu de la question centrale */
+			.challenge-question {
+				align-items: center;
+				border: 1px solid #ffb26b;
+				border-radius: 0.35em;
+				display: flex;
+				gap: 1em;
+				margin-top: 1em;
+				padding: 0.4em 0.5em;
+			}
+
+			/* => Icône "?" dans l'encadré bleu */
+			.challenge-question .icon {
+				color: #ffb26b;
+				font-size: 1.3em;
+			}
+
+			/* => Texte en gras dans l'encadré bleu */
+			.challenge-question strong {
+				font-size: 0.85em;
+			}
+
+			/* => Espacement général autour du bloc "Le défi métier" */
+			#one.project-challenge {
+			    padding: 0 !important;
+			}
+
+			/* => Largeur et espacement interne du bloc "Le défi métier" */
+			#one.project-challenge .inner {
+			    max-width: 80em;
+			    padding-top: 2em !important;
+			    padding-bottom: 2em !important;
+			}
+
+			/* => Espace sous le titre "Le défi métier" */
+			#one.project-challenge header.major {
+			    margin-bottom: 1em;
+			}
+
+			/* Suite de la page projet */
+
+			/* => Fond (bleu foncé) du bloc de texte à droite de la section "La solution développée" */
+			.solution-spotlight .content {
+				background: #0f2037;
+			}
+
+			/* => Cadrage des photos dans les sections "La solution" et "Impact" */
+			.solution-spotlight .image img,
+			.impact-spotlight .image img {
+				object-fit: cover;
+			}
+
+			/* => Phrase d'intro de la section "La solution développée" */
+			.solution-lead {
+				font-size: 0.9em;
+				line-height: 1.75;
+			}
+
+			/* => Grille des 3 chiffres clés */
+			.solution-metrics {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 0;
+				margin-top: 2em;
+			}
+
+			/* => Chaque chiffre clé : bordure verticale de séparation, espacement */
+			.solution-metric {
+				border-left: 1px solid rgba(255, 255, 255, 0.2);
+				padding: 0 1.25em;
+			}
+
+			/* => Le 1er chiffre clé : pas de bordure à gauche */
+			.solution-metric:first-child {
+				border-left: 0;
+				padding-left: 0;
+			}
+
+			/* => Icône au-dessus de chaque chiffre clé */
+			.solution-metric .icon {
+				color: #ffb26b;
+				display: block;
+				font-size: 1.5em;
+				margin-bottom: 0.55em;
+			}
+
+			/* => Texte en gras de chaque chiffre clé */
+			.solution-metric strong {
+				display: block;
+				font-size: 0.9em;
+				line-height: 1.45;
+			}
+
+			/* => Largeur commune des blocs pleine largeur (dashboard / scoring / fonctionnalités / rôle / technologies) */
+			.process-section .inner,
+			.features-section .inner,
+			.tech-section .inner,
+			.role-section .inner {
+				margin: 0 auto;
+				max-width: 80em;
+				padding: 0 3em;
+				width: calc(100% - 6em);
+			}
+
+			/* => Centrage des titres de section */
+			.section-heading {
+				text-align: center;
+			}
+
+			/* => Centre la petite ligne de soulignement sous ces titres */
+			.section-heading.major:after {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			/* => Fond bleu foncé du bloc "Organisation du dashboard" */
+			.dashboard-section {
+				background: #101e33;
+				padding: 4em 0;
+			}
+
+			/* => Grille des 6 cartes de l'organisation du dashboard (onglets de l'application) */
+			.dashboard-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1em;
+				margin-top: 2.5em;
+			}
+
+			/* => Chaque carte "onglet" du dashboard */
+			.dashboard-item {
+				background: rgba(255, 255, 255, 0.055);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				padding: 1.5em 1.6em;
+			}
+
+			/* => Petit libellé "Onglet" au-dessus du titre de chaque carte dashboard */
+			.dashboard-item .tab-label {
+				color: #ffb26b;
+				display: block;
+				font-size: 0.68em;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+				margin-bottom: 0.5em;
+				text-transform: uppercase;
+			}
+
+			/* => Icône de chaque carte dashboard */
+			.dashboard-item .icon {
+				color: #e8c39a;
+				font-size: 1.4em;
+				margin-bottom: 0.5em;
+			}
+
+			/* => Titre de chaque carte dashboard */
+			.dashboard-item h3 {
+				font-size: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			/* => Texte descriptif de chaque carte dashboard */
+			.dashboard-item p {
+				font-size: 0.82em;
+				line-height: 1.5;
+				margin: 0;
+				opacity: 0.85;
+			}
+
+			/* => Fond violet du bloc "Fonctionnement du scoring" */
+			.process-section {
+				background: #5b889d;
+				padding: 3em 0;
+			}
+
+			/* => Sous-titre centré sous "Fonctionnement du scoring" */
+			.process-section .section-intro {
+				font-size: 0.85em;
+				margin: 0 auto;
+				max-width: 46em;
+				opacity: 0.9;
+				text-align: center;
+			}
+
+			/* => Grille des 4 étapes (Collecter / Mesurer / Scorer / Décider) */
+			.process-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				margin-top: 2.5em;
+			}
+
+			/* => Chaque étape individuelle */
+			.process-step {
+				padding: 0 1.4em;
+				position: relative;
+				text-align: center;
+			}
+
+			/* => Trait horizontal qui relie les étapes entre elles */
+			.process-step:not(:last-child):after {
+				background: rgba(255, 255, 255, 0.35);
+				content: '';
+				height: 1px;
+				position: absolute;
+				right: -12%;
+				top: 3.15em;
+				width: 24%;
+			}
+
+			/* => Gros numéro en filigrane derrière chaque étape */
+			.process-number {
+				color: rgba(51, 75, 80, 0.14);
+				font-size: 3.5em;
+				font-weight: 700;
+				line-height: 1;
+			}
+
+			/* => Icône de chaque étape */
+			.process-step .icon {
+				color: #ffd9a8;
+				font-size: 2em;
+				margin: 0.25em 0 0.75em;
+			}
+
+			/* => Titre de chaque étape */
+			.process-step h3 {
+				font-size: 1.05em;
+				margin-bottom: 0.55em;
+			}
+
+			/* => Texte descriptif de chaque étape */
+			.process-step p {
+				font-size: 0.7em;
+				line-height: 1.55;
+				margin: 0;
+			}
+
+			/* => Grille des 4 axes du score (Économique / Qualité / Délais / Évaluation) */
+			.score-grid {
+				display: grid;
+				gap: 1em;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				margin-top: 2.5em;
+			}
+
+			/* => Chaque carte d'axe de score */
+			.score-card {
+				background: rgba(15, 32, 55, 0.35);
+				border: 1px solid rgba(255, 255, 255, 0.25);
+				border-radius: 0.4em;
+				padding: 1.2em 1.1em;
+			}
+
+			/* => Ligne icône + points de chaque axe */
+			.score-card .score-top {
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 0.6em;
+			}
+
+			/* => Icône de chaque axe */
+			.score-card .icon {
+				color: #ffd9a8;
+				font-size: 1.3em;
+			}
+
+			/* => Badge de points ("35 pts") de chaque axe */
+			.score-points {
+				background: #ffb26b;
+				border-radius: 1em;
+				color: #0f2037;
+				font-size: 0.72em;
+				font-weight: 700;
+				padding: 0.25em 0.7em;
+			}
+
+			/* => Titre de chaque axe */
+			.score-card h3 {
+				font-size: 0.92em;
+				margin-bottom: 0.4em;
+			}
+
+			/* => Texte descriptif de chaque axe */
+			.score-card p {
+				font-size: 0.72em;
+				line-height: 1.5;
+				margin: 0;
+				opacity: 0.9;
+			}
+
+			/* => Note explicative sous la grille des axes (neutralisation des données manquantes) */
+			.score-note {
+				border-left: 3px solid #ffb26b;
+				font-size: 0.8em;
+				line-height: 1.6;
+				margin: 1.75em auto 0;
+				max-width: 60em;
+				opacity: 0.92;
+				padding: 0.15em 0 0.15em 1.1em;
+			}
+
+			/* => Fond bleu foncé du bloc "Fonctionnalités clés" */
+			.features-section {
+				background: #10243b;
+				padding: 4.5em 0;
+			}
+
+			/* => Grille des 6 cartes de fonctionnalités */
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1em;
+				margin-top: 2.5em;
+			}
+
+			/* => Chaque carte de fonctionnalité : fond, bordure, centrage */
+			.feature-item {
+				background: rgba(255, 255, 255, 0.055);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				padding: 1.7em;
+				text-align: center;
+			}
+
+			/* => Icône de chaque fonctionnalité */
+			.feature-item .icon {
+				color: #e8c39a;
+				font-size: 1.8em;
+				margin-bottom: 0.55em;
+			}
+
+			/* => Titre de chaque fonctionnalité */
+			.feature-item h3 {
+				font-size: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			/* => Texte descriptif de chaque fonctionnalité */
+			.feature-item p {
+				font-size: 0.88em;
+				margin: 0;
+			}
+
+			/* => Fond (bleu foncé) du bloc de texte à droite de la section "Impact" */
+			.impact-spotlight .content {
+				background: #10243b;
+			}
+
+			/* => Liste à puces de la section "Impact" */
+			.impact-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			/* => Chaque ligne de la liste "Impact" (icône + texte côte à côte) */
+			.impact-list li {
+				align-items: flex-start;
+				display: flex;
+				gap: 1em;
+				margin-bottom: 1.2em;
+			}
+
+			/* => Icône de chaque ligne "Impact" */
+			.impact-list .icon {
+				color: #9bf1c5;
+				font-size: 1.35em;
+				margin-top: 0.15em;
+				width: 1.4em;
+			}
+
+			/* => Titre + description de chaque ligne "Impact" (affichage en bloc) */
+			.impact-list strong,
+			.impact-list span {
+				display: block;
+			}
+
+			/* => Description (texte plus clair et plus petit) de chaque ligne "Impact" */
+			.impact-list span {
+				font-size: 0.9em;
+				opacity: 0.8;
+			}
+
+			/* => Citation finale en vert */
+			.impact-quote {
+				border-left: 3px solid #9bf1c5;
+				color: #b9f7d3;
+				font-size: 1em;
+				font-style: normal;
+				margin: 2em 0 0;
+				padding: 0.25em 0 0.25em 1.25em;
+			}
+
+			/* => Fond du bloc "Mon rôle" */
+			.role-section {
+				background: #2b3b59;
+				padding: 4em 0;
+			}
+
+			/* => Grille des 4 blocs "Mon rôle" */
+			.role-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 1.1em;
+				margin-top: 2.5em;
+			}
+
+			/* => Chaque bloc "Mon rôle" */
+			.role-item {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				border-radius: 0.35em;
+				padding: 1.4em 1.3em;
+			}
+
+			/* => Numéro en filigrane de chaque bloc "Mon rôle" */
+			.role-item .role-number {
+				color: #ffb26b;
+				font-size: 0.75em;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				margin-bottom: 0.5em;
+			}
+
+			/* => Titre de chaque bloc "Mon rôle" */
+			.role-item h3 {
+				font-size: 0.95em;
+				margin-bottom: 0.45em;
+			}
+
+			/* => Texte descriptif de chaque bloc "Mon rôle" */
+			.role-item p {
+				font-size: 0.78em;
+				line-height: 1.55;
+				margin: 0;
+				opacity: 0.9;
+			}
+
+			/* => Fond du tout dernier bloc "Technologies" en bas de page */
+			.tech-section {
+				background: #182338;
+				padding: 2.5em 0;
+			}
+
+			/* => Alignement icône + texte du bloc "Technologies" */
+			.tech-content {
+				align-items: flex-start;
+				display: flex;
+				gap: 1.5em;
+			}
+
+			/* => Icône "</>" du bloc "Technologies" */
+			.tech-content > .icon {
+				border: 1px solid rgba(232, 195, 154, 0.5);
+				color: #e8c39a;
+				font-size: 1.5em;
+				padding: 0.65em;
+			}
+
+			/* => Titre "Technologies" */
+			.tech-content h2 {
+				font-size: 1.35em;
+				margin-bottom: 0.55em;
+			}
+
+			/* => Liste des technos utilisées */
+			.tech-list {
+				font-size: 0.95em;
+				margin-bottom: 0.65em;
+			}
+
+			/* => Ligne "Évolution : ..." */
+			.tech-evolution {
+				font-size: 0.88em;
+				margin: 0 0 0.35em;
+				opacity: 0.82;
+			}
+
+			/* => Ajustements d'affichage pour tablette (écran ≤ 980px) : les grilles passent en 2 colonnes */
+			@media screen and (max-width: 980px) {
+				.project-facts,
+				.challenge-grid,
+				.dashboard-grid,
+				.score-grid,
+				.features-grid,
+				.role-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+
+				.process-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					row-gap: 2.5em;
+				}
+
+				.process-step:after {
+					display: none;
+				}
+
+				.project-fact:nth-child(3) {
+					border-left: 0;
+					padding-left: 0;
+				}
+
+				.project-fact {
+					margin-bottom: 1.5em;
+				}
+			}
+
+			/* => Ajustements d'affichage pour mobile (écran ≤ 736px) : grilles en 1 colonne, sections empilées */
+			@media screen and (max-width: 736px) {
+				#banner.project-hero {
+					padding: 5em 0 1.75em;
+				}
+
+				#one.project-challenge .inner {
+					padding-top: 1.5em !important;
+					padding-bottom: 1.5em !important;
+				}
+
+				.project-facts,
+				.challenge-grid,
+				.solution-metrics,
+				.process-grid,
+				.dashboard-grid,
+				.score-grid,
+				.features-grid,
+				.role-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.process-section .inner,
+				.features-section .inner,
+				.tech-section .inner,
+				.role-section .inner {
+					padding: 0 1.5em;
+					width: 100%;
+				}
+
+				.solution-metric {
+					border-left: 0;
+					border-top: 1px solid rgba(255, 255, 255, 0.2);
+					padding: 1em 0;
+				}
+
+				.tech-content {
+					flex-direction: column;
+				}
+
+				.project-fact,
+				.project-fact:nth-child(3) {
+					border-left: 0;
+					border-top: 1px solid rgba(255, 255, 255, 0.2);
+					padding: 1em 0 0;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>PM</strong> <span>PORTFOLIO DATA</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Accueil</a></li>
+							<li><a href="landing.html">A propos</a></li>
+							<li><a href="generic.html">Stack technique</a></li>
+							<li><a href="elements.html">Mon CV</a></li>
+						</ul>
+						<!-- TODO: "Get Started" / "Log In" sont des boutons par défaut du template (href="#", ne mènent nulle part). A adapter ou supprimer. -->
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2 project-hero">
+						<div class="inner">
+							<!-- À remplacer par une capture de la synthèse fournisseur -->
+							<span class="image">
+								<img src="images/pic02.jpg" alt="" />
+							</span>
+							<p class="project-eyebrow">Pilotage · Data &amp; décision</p>
+							<header class="major">
+								<h1>Piloter et comparer la performance fournisseurs</h1>
+							</header>
+							<p class="project-summary">Une application de pilotage qui consolide les données achats, qualité, livraison et facturation afin de faciliter l’évaluation des fournisseurs.</p>
+							<div class="project-facts">
+								<div class="project-fact">
+									<span>Mon rôle</span>
+									<strong>Product Owner &amp; Data</strong>
+								</div>
+								<div class="project-fact">
+									<span>Utilisateurs</span>
+									<strong>Achats · Appro · Direction</strong>
+								</div>
+								<div class="project-fact">
+									<span>Solution</span>
+									<strong>Application Streamlit</strong>
+								</div>
+								<div class="project-fact">
+									<span>Stack</span>
+									<strong>Python · Streamlit · Pandas</strong>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="project-challenge">
+								<div class="inner">
+									<header class="major">
+										<h2>Le défi métier</h2>
+									</header>
+									<p class="challenge-intro">Des données disponibles, mais dispersées entre plusieurs processus et difficiles à transformer en vision fournisseur.</p>
+
+									<div class="challenge-grid">
+										<article class="challenge-card">
+											<span class="icon solid fa-database" aria-hidden="true"></span>
+											<h3>Données fragmentées</h3>
+											<p>ERP, factures, réceptions, qualité et suivis Excel.</p>
+										</article>
+										<article class="challenge-card">
+											<span class="icon solid fa-layer-group" aria-hidden="true"></span>
+											<h3>Indicateurs hétérogènes</h3>
+											<p>Coûts, poids, défauts, délais, reliquats et anomalies.</p>
+										</article>
+										<article class="challenge-card">
+											<span class="icon solid fa-exclamation-triangle" aria-hidden="true"></span>
+											<h3>Décisions difficiles</h3>
+											<p>Absence de vision consolidée et de méthode commune d’évaluation.</p>
+										</article>
+									</div>
+
+									<div class="challenge-question">
+										<span class="icon solid fa-question-circle" aria-hidden="true"></span>
+										<strong>Comment transformer des données opérationnelles dispersées en un pilotage fournisseur clair et comparable&nbsp;?</strong>
+									</div>
+								</div>
+							</section>
+
+						<!-- Solution -->
+							<section id="solution" class="spotlights">
+								<section class="solution-spotlight">
+									<div class="image">
+										<!-- À remplacer par une capture de la synthèse fournisseur -->
+										<img src="images/pic02.jpg" alt="Aperçu de l’application de pilotage fournisseur" data-position="center center" />
+									</div>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h2>La solution développée</h2>
+											</header>
+											<p class="solution-lead">J’ai conçu une application de pilotage qui centralise les données achats et fournisseurs, calcule les principaux indicateurs de performance et les restitue dans des vues adaptées au suivi opérationnel et à la Direction.</p>
+
+											<div class="solution-metrics">
+												<div class="solution-metric">
+													<span class="icon solid fa-users" aria-hidden="true"></span>
+													<strong>35 fournisseurs<br />paramétrés</strong>
+												</div>
+												<div class="solution-metric">
+													<span class="icon solid fa-layer-group" aria-hidden="true"></span>
+													<strong>4 axes<br />de scoring</strong>
+												</div>
+												<div class="solution-metric">
+													<span class="icon regular fa-calendar-alt" aria-hidden="true"></span>
+													<strong>Filtrage par<br />période et gamme</strong>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Organisation du dashboard -->
+							<section id="dashboard" class="dashboard-section">
+								<div class="inner">
+									<header class="major section-heading">
+										<h2>Organisation du dashboard</h2>
+									</header>
+									<div class="dashboard-grid">
+										<article class="dashboard-item">
+											<span class="tab-label">Onglet</span>
+											<span class="icon solid fa-bullseye" aria-hidden="true"></span>
+											<h3>Synthèse</h3>
+											<p>Score de performance global, positionnement stratégique du fournisseur et lecture croisée performance x dépendance.</p>
+										</article>
+										<article class="dashboard-item">
+											<span class="tab-label">Onglet</span>
+											<span class="icon solid fa-coins" aria-hidden="true"></span>
+											<h3>Achat &amp; Coûts</h3>
+											<p>Montant des achats, frais annexes, structure du coût (matière / labor), évolution mensuelle et prix moyen.</p>
+										</article>
+										<article class="dashboard-item">
+											<span class="tab-label">Onglet</span>
+											<span class="icon solid fa-balance-scale" aria-hidden="true"></span>
+											<h3>Qualité &amp; Réception</h3>
+											<p>Anomalies de facturation, taux de produits défectueux et conformité du poids reçu par rapport au poids attendu.</p>
+										</article>
+										<article class="dashboard-item">
+											<span class="tab-label">Onglet</span>
+											<span class="icon solid fa-truck" aria-hidden="true"></span>
+											<h3>Délais &amp; Reliquats</h3>
+											<p>Délais de production et de livraison, respect du délai cible par gamme et suivi des commandes en reliquat.</p>
+										</article>
+										<article class="dashboard-item">
+											<span class="tab-label">Onglet</span>
+											<span class="icon solid fa-chart-line" aria-hidden="true"></span>
+											<h3>Évolution achat &amp; RFA</h3>
+											<p>Chiffre d’affaires acheté par fournisseur et estimation des remises de fin d’année (RFA).</p>
+										</article>
+										<article class="dashboard-item">
+											<span class="tab-label">Onglet</span>
+											<span class="icon solid fa-table" aria-hidden="true"></span>
+											<h3>Détail opérationnel</h3>
+											<p>Tables détaillées par fournisseur, facture, poids, délais et reliquats pour l’analyse fine.</p>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Fonctionnement du scoring -->
+							<section id="scoring" class="process-section">
+								<div class="inner">
+									<header class="major section-heading">
+										<h2>Fonctionnement du scoring</h2>
+									</header>
+									<p class="section-intro">Un score fournisseur noté sur 100 points, construit en 4 étapes à partir des données déjà consolidées dans le dashboard.</p>
+									<div class="process-grid">
+										<article class="process-step">
+											<div class="process-number">01</div>
+											<span class="icon solid fa-database" aria-hidden="true"></span>
+											<h3>Collecter</h3>
+											<p>Consolider les données disponibles.</p>
+										</article>
+										<article class="process-step">
+											<div class="process-number">02</div>
+											<span class="icon solid fa-ruler" aria-hidden="true"></span>
+											<h3>Mesurer</h3>
+											<p>Calculer les KPI par fournisseur.</p>
+										</article>
+										<article class="process-step">
+											<div class="process-number">03</div>
+											<span class="icon solid fa-award" aria-hidden="true"></span>
+											<h3>Scorer</h3>
+											<p>Appliquer les seuils et pondérations.</p>
+										</article>
+										<article class="process-step">
+											<div class="process-number">04</div>
+											<span class="icon solid fa-check-circle" aria-hidden="true"></span>
+											<h3>Décider</h3>
+											<p>Identifier les priorités et plans d’action.</p>
+										</article>
+									</div>
+
+									<div class="score-grid">
+										<article class="score-card">
+											<div class="score-top">
+												<span class="icon solid fa-coins" aria-hidden="true"></span>
+												<span class="score-points">35 pts</span>
+											</div>
+											<h3>Performance économique</h3>
+											<p>Frais annexes, part de main d’œuvre et taux de perte comparés aux fournisseurs de la même gamme, atteinte de la RFA.</p>
+										</article>
+										<article class="score-card">
+											<div class="score-top">
+												<span class="icon solid fa-balance-scale" aria-hidden="true"></span>
+												<span class="score-points">35 pts</span>
+											</div>
+											<h3>Qualité</h3>
+											<p>Taux de produits défectueux, coût des défauts et conformité du poids reçu par rapport au poids théorique (±5&nbsp;%).</p>
+										</article>
+										<article class="score-card">
+											<div class="score-top">
+												<span class="icon solid fa-truck" aria-hidden="true"></span>
+												<span class="score-points">20 pts</span>
+											</div>
+											<h3>Délais &amp; reliquats</h3>
+											<p>Respect du délai de production cible, fréquence des livraisons incomplètes et durée moyenne pour solder un reliquat.</p>
+										</article>
+										<article class="score-card">
+											<div class="score-top">
+												<span class="icon solid fa-comments" aria-hidden="true"></span>
+												<span class="score-points">10 pts</span>
+											</div>
+											<h3>Évaluation utilisateur</h3>
+											<p>Appréciation qualitative de l’acheteur : réactivité, communication, flexibilité et résolution des problèmes.</p>
+										</article>
+									</div>
+
+									<blockquote class="score-note">Une donnée manquante n’est jamais notée comme un échec&nbsp;: le critère est neutralisé et ses points sont répartis sur les autres critères du même axe. Le suivi des anomalies de facturation est déjà disponible dans le dashboard, mais n’est pas encore intégré au score. Le scoring constitue une évolution progressive du dashboard, qui vise à formaliser une méthode d’évaluation commune à partir des indicateurs déjà disponibles.</blockquote>
+								</div>
+							</section>
+
+						<!-- Fonctionnalités -->
+							<section id="fonctionnalites" class="features-section">
+								<div class="inner">
+									<header class="major section-heading">
+										<h2>Fonctionnalités clés</h2>
+									</header>
+									<div class="features-grid">
+										<article class="feature-item">
+											<span class="icon solid fa-database" aria-hidden="true"></span>
+											<h3>Consolidation des données</h3>
+											<p>Achats, réceptions et facturation depuis l’ERP et les suivis Excel</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-coins" aria-hidden="true"></span>
+											<h3>Analyse des achats et des coûts</h3>
+											<p>Montants, frais annexes et structure du coût d’achat</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-weight" aria-hidden="true"></span>
+											<h3>Suivi qualité et poids</h3>
+											<p>Défectueux et conformité du poids reçu</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-truck" aria-hidden="true"></span>
+											<h3>Analyse des délais et reliquats</h3>
+											<p>Respect des délais et commandes incomplètes</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-file-invoice-dollar" aria-hidden="true"></span>
+											<h3>Contrôle de la facturation</h3>
+											<p>Anomalies détectées et crédits potentiels</p>
+										</article>
+										<article class="feature-item">
+											<span class="icon solid fa-chart-bar" aria-hidden="true"></span>
+											<h3>Scoring et comparaison</h3>
+											<p>Score de performance et positionnement fournisseur</p>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Impact -->
+							<section id="impact" class="spotlights">
+								<section class="impact-spotlight">
+									<div class="image">
+										<!-- À remplacer par une capture du tableau de synthèse fournisseur -->
+										<img src="images/pic01.jpg" alt="Aperçu du pilotage et de la comparaison des fournisseurs" data-position="center center" />
+									</div>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h2>Impact</h2>
+											</header>
+											<ul class="impact-list">
+												<li><span class="icon solid fa-layer-group" aria-hidden="true"></span><div><strong>Vision consolidée</strong><span>Regroupement des données fournisseurs dans une interface unique.</span></div></li>
+												<li><span class="icon solid fa-balance-scale" aria-hidden="true"></span><div><strong>Analyse homogène</strong><span>Indicateurs calculés selon des règles communes.</span></div></li>
+												<li><span class="icon solid fa-bolt" aria-hidden="true"></span><div><strong>Décision facilitée</strong><span>Identification plus rapide des points de vigilance.</span></div></li>
+												<li><span class="icon solid fa-users" aria-hidden="true"></span><div><strong>Pilotage partagé</strong><span>Vues adaptées aux équipes opérationnelles et à la Direction.</span></div></li>
+											</ul>
+											<blockquote class="impact-quote">Le projet transforme des données fournisseurs dispersées en une vision structurée, comparable et directement exploitable pour le pilotage des achats.</blockquote>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Mon rôle -->
+							<section id="role" class="role-section">
+								<div class="inner">
+									<header class="major section-heading">
+										<h2>Mon rôle</h2>
+									</header>
+									<div class="role-grid">
+										<article class="role-item">
+											<div class="role-number">01</div>
+											<h3>Cadrage métier</h3>
+											<p>Recueil des besoins des équipes Achats, Appro et Direction, et structuration des indicateurs à suivre.</p>
+										</article>
+										<article class="role-item">
+											<div class="role-number">02</div>
+											<h3>Modélisation des KPI</h3>
+											<p>Définition des règles de calcul (coûts, poids, délais, anomalies) à partir des données ERP et Excel.</p>
+										</article>
+										<article class="role-item">
+											<div class="role-number">03</div>
+											<h3>Développement data</h3>
+											<p>Conception et développement de l’application Streamlit, calculs Pandas et visualisations Altair / Plotly.</p>
+										</article>
+										<article class="role-item">
+											<div class="role-number">04</div>
+											<h3>Accompagnement des utilisateurs</h3>
+											<!-- À confirmer : information non vérifiable dans le code -->
+											<p>Présentation du dashboard aux équipes et évolution progressive du scoring à partir des retours terrain.</p>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Technologies -->
+							<section id="technologies" class="tech-section">
+								<div class="inner">
+									<div class="tech-content">
+										<span class="icon solid fa-code" aria-hidden="true"></span>
+										<div>
+											<h2>Technologies</h2>
+											<p class="tech-list">Python · Streamlit · Pandas · NumPy · Altair · Plotly · OpenPyXL · xlrd · PyArrow</p>
+											<p class="tech-evolution"><strong>Évolution prévue&nbsp;:</strong> intégration progressive des anomalies de facturation dans le score, et migration envisagée vers Django (dépendance déjà présente dans le projet).</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<!-- TODO: toute cette section Contact est le contenu par défaut du template (formulaire non fonctionnel action="#", email/téléphone/adresse fictifs). A personnaliser ou supprimer si non utilisée sur une page projet. -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<!-- TODO: liens sociaux tous en href="#" (ne mènent nulle part) et copyright "Untitled". Mettre les vraies URLs (LinkedIn/GitHub en priorité, retirer Twitter/Facebook/Instagram si non pertinents) et le vrai nom/année en copyright. -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

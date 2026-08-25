@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Forty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* => Palette resserrée des vignettes "Mes projets" (remplace les 6 couleurs pastel par défaut du template) :
+			      bleu nuit et turquoise pour les projets livrés, orange en accent pour le projet phare,
+			      un même gris-bleu neutre pour les projets encore en cours pour ne pas les mettre au même niveau visuel. */
+
+			/* => Vignette "Contrôle factures & réceptions" : même bleu que le bandeau de controle-factures.html */
+			#tile-controle-factures:before {
+				background-color: #3d6a9c !important;
+			}
+
+			/* => Vignette "Plateforme Performance Commercial" : turquoise, 2e teinte de la famille data du site */
+			#tile-plateforme-commerciale:before {
+				background-color: #1f7a8c !important;
+			}
+
+			/* => Vignette "Performance fournisseur" : orange dédié, mis en avant comme projet phare */
+			#tile-performance-frns:before {
+				background-color: #e8720c !important;
+			}
+
+			/* => Vignettes des projets encore en cours (contenu non finalisé) : ton neutre commun */
+			#tile-projet-4:before,
+			#tile-projet-5:before,
+			#tile-projet-6:before {
+				background-color: #33415c !important;
+			}
+
+			/* => Bandeau d'accueil : même bleu nuit que la section Contact en bas de page, pour une teinte uniforme sur toute la page */
+			#banner:after {
+				background-color: #171f4a !important;
+			}
+
+			/* => Bandeau d'accueil : portrait aligné à côté du texte (nom + accroche) */
+			#banner .banner-profile {
+				align-items: center;
+				display: flex;
+				gap: 2.5em;
+				text-align: left;
+			}
+
+			/* => Photo de portrait ronde du bandeau d'accueil */
+			#banner .portrait {
+				border: 3px solid rgba(255, 255, 255, 0.3);
+				border-radius: 50%;
+				box-shadow: 0 0.6em 1.8em rgba(0, 0, 0, 0.4);
+				display: block;
+				flex-shrink: 0;
+				height: 10.5em;
+				overflow: hidden;
+				width: 10.5em;
+			}
+
+			#banner .portrait img {
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+
+			/* => Empile la photo au-dessus du texte et centre le tout sur mobile */
+			@media screen and (max-width: 736px) {
+				#banner .banner-profile {
+					flex-direction: column;
+					text-align: center;
+				}
+
+				#banner .portrait {
+					height: 8em;
+					width: 8em;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>PM</strong><span>Portfolio Data</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Accueil</a></li>
+							<li><a href="landing.html">A propos</a></li>
+							<li><a href="generic.html">Stack technique</a></li>
+							<li><a href="elements.html">Mon CV</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">MES PROJETS</a></li>
+							<li><a href="#" class="button fit">Contactez moi</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<div class="banner-profile">
+								<span class="portrait">
+									<img src="images/portrait.jpg" alt="Portrait de Pauline Maurin" />
+								</span>
+								<div>
+									<header class="major">
+										<h1>Pauline Maurin</h1>
+									</header>
+									<div class="content">
+										<p>
+										Responsable Performance Business & Transformation Data.<br />
+										Je conçois des applications et des outils data qui transforment
+										des processus métier complexes en solutions simples et pilotables.
+										</p>
+										<ul class="actions">
+											<li><a href="#one" class="button next scrolly">Mes projets</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article id="tile-controle-factures">
+									<span class="image">
+										<img src="images/br_controle.JPG" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="controle-factures.html" class="link">Contrôle factures & réceptions</a></h3>
+										<p>Automatisation du contrôle et du rapprochement des données fournisseurs avec l’ERP.</p>
+									</header>
+								</article>
+								<article id="tile-performance-frns">
+									<span class="image">
+										<img src="images/pic02.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="performance-frns.html" class="link">Performance fournisseur</a></h3>
+										<p>Application de pilotage des achats, de la qualité, des délais et des anomalies.</p>
+									</header>
+								</article>
+								<article id="tile-plateforme-commerciale">
+									<span class="image">
+										<img src="images/pic03.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="plateforme-commerciale.html" class="link">Plateforme Performance Commercial</a></h3>
+										<p>Pilotage temps réel des ventes : KPI, analyse des offres, visuel marketing...</p>
+									</header>
+								</article>
+								<article id="tile-projet-4">
+									<span class="image">
+										<img src="images/pic04.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="projet-4.html" class="link">Projets 4</a></h3>
+										<p>En cours...</p>
+									</header>
+								</article>
+								<article id="tile-projet-5">
+									<span class="image">
+										<img src="images/pic05.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="projet-5.html" class="link">Projet 5</a></h3>
+										<p>En cours...</p>
+									</header>
+								</article>
+								<article id="tile-projet-6">
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="projet-6.html" class="link">Projets 6</a></h3>
+										<p>En cours...</p>
+									</header>
+								</article>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>Massa libero</h2>
+									</header>
+									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+									<ul class="actions">
+										<li><a href="landing.html" class="button next">Mes projets</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
