@@ -1,0 +1,247 @@
+/*
+	Surcouche typographique "data / engineering" par-dessus le thème Forty.
+	Charge après main.css sur toutes les pages : Inter en texte courant,
+	IBM Plex Mono en accent sur les métriques chiffrées et la stack technique.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+	--font-sans: 'Inter', "Source Sans Pro", Helvetica, sans-serif;
+	--font-mono: 'IBM Plex Mono', "Courier New", monospace;
+
+	/* Palette sombre "Coderon" : canvas quasi-noir + surfaces de carte,
+	   remplace le bleu-violet marine par défaut de Forty (#171f4a/#242943). */
+	--bg: #0b0f1a;
+	--bg-main: #10151f;
+	--surface: #141a26;
+	--surface-border: rgba(255, 255, 255, 0.08);
+}
+
+/*
+	Fond général du site : body/#header/#main/#menu sont définis en dur dans
+	main.css (#171f4a, #2a2f4a, rgba(36,41,67,.9)) ; on les réaligne sur le
+	nouveau canvas ici. Les couleurs de bannière par projet (#banner.styleN)
+	et la palette d'accents restent inchangées — elles jouent déjà le rôle
+	des tags colorés à la Coderon.
+*/
+body {
+	background: var(--bg) !important;
+}
+
+#header {
+	background-color: var(--bg) !important;
+}
+
+#main {
+	background-color: var(--bg-main) !important;
+}
+
+#menu {
+	background: rgba(11, 15, 26, 0.92) !important;
+}
+
+/* Texte courant + formulaires */
+body, input, select, textarea {
+	font-family: var(--font-sans) !important;
+	letter-spacing: 0.005em;
+}
+
+/* Titres : plus gras et plus resserrés, pour un rendu "produit" plutôt que "blog corporate" */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-sans) !important;
+	letter-spacing: -0.02em;
+}
+
+h1, h2 {
+	font-weight: 800 !important;
+}
+
+h3 {
+	font-weight: 700 !important;
+}
+
+/* Blocs de code déjà prévus par le thème */
+pre, code {
+	font-family: var(--font-mono) !important;
+}
+
+/* Accent monospace : chiffres clés et stack technique des pages projet */
+.mono,
+.solution-metric strong,
+.tech-list,
+.tech-evolution strong {
+	font-family: var(--font-mono) !important;
+	font-weight: 500;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: -0.01em;
+}
+
+.solution-metric strong {
+	font-weight: 600;
+}
+
+/*
+	Grille de cartes "Mes projets" (page d'accueil), inspirée de la grille de
+	blog du thème Coderon : cartes sombres arrondies, image visible en haut,
+	pastille de catégorie, effet de survol léger — plutôt que la vignette
+	plein-cadre par défaut de Forty (couleur pleine qui s'efface au survol).
+*/
+.tiles {
+	display: grid !important;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.75em;
+	padding: 0 !important;
+}
+
+@media screen and (max-width: 980px) {
+	.tiles {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.tiles {
+		grid-template-columns: 1fr !important;
+	}
+}
+
+.tiles article {
+	background: #141a26 !important;
+	background-image: none !important;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 1.1em;
+	box-shadow: 0 0.6em 1.8em rgba(0, 0, 0, 0.25);
+	display: flex !important;
+	flex-direction: column;
+	align-items: stretch !important;
+	width: auto !important;
+	height: auto !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	padding: 0 !important;
+	overflow: hidden;
+	position: relative;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tiles article:hover {
+	transform: translateY(-0.35em);
+	box-shadow: 0 1em 2.4em rgba(0, 0, 0, 0.4);
+}
+
+.tiles article:before,
+.tiles article:after {
+	display: none !important;
+}
+
+.tiles article .image {
+	display: block !important;
+	height: 12em;
+	overflow: hidden;
+	position: relative;
+}
+
+.tiles article .image img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* Pastille de catégorie superposée sur l'image, couleur définie par carte plus bas */
+.tiles article .tile-tag {
+	position: absolute;
+	top: 0.9em;
+	left: 0.9em;
+	z-index: 5;
+	padding: 0.35em 0.9em;
+	border-radius: 999px;
+	font-family: var(--font-mono);
+	font-size: 0.68em;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: #fff;
+	background: #3d6a9c;
+}
+
+#tile-performance-frns .tile-tag {
+	background: #e8720c;
+}
+
+#tile-plateforme-commerciale .tile-tag {
+	background: #1f7a8c;
+}
+
+#tile-projet-4 .tile-tag,
+#tile-projet-5 .tile-tag,
+#tile-projet-6 .tile-tag {
+	background: #33415c;
+}
+
+.tiles article header.major {
+	padding: 1.4em 1.5em 1.7em;
+	position: static;
+	width: 100% !important;
+}
+
+.tiles article h3 {
+	font-size: 1.15em;
+	margin-bottom: 0.4em;
+}
+
+.tiles article h3 a {
+	color: #fff;
+}
+
+/* Neutralise le style "eyebrow" (majuscules, tracking large) que Forty applique
+   par défaut au 1er <p> d'un header.major : ici c'est une description de carte,
+   pas un sur-titre. */
+.tiles article header.major > p,
+.tiles article p {
+	font-size: 0.85em;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-height: 1.5;
+	margin: 0;
+	opacity: 0.7;
+	text-transform: none;
+}
+
+/* Bouton principal en dégradé (CTA), dans le même esprit que Coderon mais sur
+   la palette bleu/violet déjà utilisée par le site plutôt que rose/violet. */
+.button.primary {
+	background: linear-gradient(135deg, #6fc3df, #8d82c4) !important;
+	border: 0 !important;
+	border-radius: 999px !important;
+	color: #10162a !important;
+	font-weight: 700 !important;
+	transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.button.primary:hover {
+	filter: brightness(1.08);
+	transform: translateY(-0.05em);
+}
+
+/*
+	Cartes "défi métier" (.challenge-card) et "fonctionnalités clés"
+	(.feature-item), présentes à l'identique dans controle-factures.html et
+	performance-frns.html : on leur applique la même surface/bordure/radius
+	que .tiles article pour que les deux pages projet parlent le même
+	langage visuel que la grille d'accueil. Le reste (grille, tailles de
+	police, icônes) reste géré par le <style> inline propre à chaque page.
+*/
+.challenge-card,
+.feature-item {
+	background: var(--surface) !important;
+	border: 1px solid var(--surface-border) !important;
+	border-radius: 1em !important;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.challenge-card:hover,
+.feature-item:hover {
+	transform: translateY(-0.3em);
+	box-shadow: 0 1em 2.2em rgba(0, 0, 0, 0.35);
+}

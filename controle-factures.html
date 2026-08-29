@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+			<link rel="stylesheet" href="assets/css/custom-theme.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			/* Présentation synthétique du projet */
@@ -178,13 +179,24 @@
 
 			/* => Fond (bleu foncé) du bloc de texte à droite de la section "La solution développée" */
 			.solution-spotlight .content {
-				background: #0f2037;
+				background: #0b1627;
 			}
 
-			/* => Cadrage des photos dans les sections "La solution" et "Impact" */
-			.solution-spotlight .image img,
+			/* => Cadrage des photos dans la section "Impact" */
 			.impact-spotlight .image img {
 				object-fit: cover;
+			}
+
+			/* => Section "La solution développée" : colonne image elargie (30% -> 50%)
+			   pour se rapprocher du ratio reel de la photo (1861x888) et limiter le vide */
+			.solution-spotlight > .image,
+			.solution-spotlight > .content {
+				width: 50% !important;
+			}
+
+			.solution-spotlight .image img {
+				height: 100%;
+				object-fit: contain;
 			}
 
 			/* => Phrase d'intro de la section "La solution développée" */
@@ -230,7 +242,7 @@
 
 			/* => Fond violet du bloc "Comment ça fonctionne" */
 			.process-section {
-				background: #5b889d;
+				background: #446676;
 				padding: 2em 0;
 			}
 
@@ -310,7 +322,7 @@
 
 			/* => Fond bleu foncé du bloc "Fonctionnalités clés" */
 			.features-section {
-				background: #101e33;
+				background: #0c1726;
 				padding: 4.5em 0;
 			}
 
@@ -351,7 +363,7 @@
 
 			/* => Fond (bleu foncé) du bloc de texte à droite de la section "Impact" */
 			.impact-spotlight .content {
-				background: #10243b;
+				background: #0c1b2c;
 			}
 
 			/* => Liste à puces de la section "Impact" */
@@ -401,7 +413,7 @@
 
 			/* => Fond du tout dernier bloc "Technologies" en bas de page */
 			.tech-section {
-				background: #2b3b59;
+				background: #202c43;
 				padding: 2.5em 0;
 			}
 
